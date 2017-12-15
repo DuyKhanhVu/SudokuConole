@@ -16,6 +16,7 @@ public:
 	bool FindSolve();
 	void CreatData(string s);
 	void InsertData();
+	void ShowSolve();
 	bool InGame();
 };
 

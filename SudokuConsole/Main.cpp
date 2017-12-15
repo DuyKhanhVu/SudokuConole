@@ -15,8 +15,11 @@ int main()
 		Table Tab;
 		string level = Scr.SlectLevel();
 		Scr.Loading();
-		Tab.CreatData(level);
-		Tab.FindSolve();
+		while (true)
+		{
+			Tab.CreatData(level);
+			if (Tab.FindSolve()) break;
+		}
 		system("cls");
 		Tab.CreatTable();
 		Tab.InsertData();

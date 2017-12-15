@@ -1,4 +1,2 @@
-﻿  Screen.cpp
-c:\users\asus\source\repos\sudokuconsole\sudokuconsole\screen.cpp(167): warning C4267: 'argument': conversion from 'size_t' to 'SHORT', possible loss of data
-c:\users\asus\source\repos\sudokuconsole\sudokuconsole\screen.cpp(150): warning C4715: 'Screen::SlectLevel': not all control paths return a value
-  SudokuConsole.vcxproj -> C:\Users\ASUS\source\repos\SudokuConsole\Debug\SudokuConsole.exe
+﻿  Main.cpp
+LINK : fatal error LNK1168: cannot open K:\TH OOP\Git\SudokuConole\Debug\SudokuConsole.exe for writing
