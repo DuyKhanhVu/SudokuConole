@@ -11,11 +11,11 @@ void Table::Init()
 		Tab[i] = new int[9];
 		Sol[i] = new int[9];
 	}
-	for (int i = 0;i < 9;i++)
+	for (int i=0; i<9;i++)
 		for (int j = 0;j < 9;j++)
 		{
-			Tab[i][j] = 0;
 			Sol[i][j] = 0;
+			Tab[i][j] = 0;
 		}
 }
 
@@ -120,19 +120,13 @@ void Table::CreatData(string s)
 			i = rand() % 9;
 			j = rand() % 9;
 			x = rand() % 9;
-			if (Safe(Tab, i, j, x))
+			if (Safe(Sol, i, j, x + 1))
 			{
-				this->Tab[i][j] = x + 1;
-				this->Sol[i][j] = x + 1;
+				Tab[i][j] = x + 1;
+				Sol[i][j] = x + 1;
 				found = true;
 			}
 		}
-	}
-	for (int i = 0;i < 9;i++)
-	{
-		for (int j = 0;j < 9;j++)
-			cout << Tab[i][j] << " ";
-		cout << endl;
 	}
 }
 
@@ -223,6 +217,14 @@ void Table::InsertData()
 				cout << this->Tab[i][j];
 		}
 		y = y + 2;
+	}
+	cout << endl;
+	gotoxy(0, 22);
+	for (int i = 0;i < 9;i++)
+	{
+		for (int j = 0;j < 9;j++)
+			cout << Sol[i][j] << " ";
+		cout << endl;
 	}
 }
 

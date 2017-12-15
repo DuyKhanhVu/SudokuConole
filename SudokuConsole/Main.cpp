@@ -9,13 +9,13 @@ int main()
 	do
 	{
 		Scr.setFullScreen();
-		//Scr.Begin();
+		Scr.Begin();
 		
 		Sleep(500);
 		Table Tab;
-		//string level = Scr.SlectLevel();
-		//Scr.Loading();
-		Tab.CreatData("Easy");
+		string level = Scr.SlectLevel();
+		Scr.Loading();
+		Tab.CreatData(level);
 		Tab.FindSolve();
 		system("cls");
 		Tab.CreatTable();

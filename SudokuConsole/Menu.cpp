@@ -16,5 +16,5 @@ void Menu::CreatMenu()
 	gotoxy(115, 7); cout << "Press P    : Pause";
 	gotoxy(115, 8); cout << "Press H    : Hint";
 	gotoxy(115, 9); cout << "Press SPACE: Check Slution";
-	gotoxy(115, 10); cout << "Press ESC : EXIT";
+	gotoxy(115, 10); cout << "Press ESC  : EXIT";
 }
