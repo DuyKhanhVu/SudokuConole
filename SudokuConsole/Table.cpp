@@ -259,17 +259,14 @@ bool Check(int *Temp[], int row, int col, int num)
 {
 
 	for (int i = 0;i < 9; i++)
-		//if (Temp[i][col] == num) return false;
 		if ((i != row) && (Temp[i][col] == num)) return false;
 	for (int j = 0;j < 9; j++)
-		//if (Temp[row][j] == num) return false;
 		if ((j != col) && (Temp[row][j] == num)) return false;
 
 	int BoxStartRow = row - row % 3;
 	int BoxStartCol = col - col % 3;
 	for (int i = 0;i < 3;i++)
 		for (int j = 0;j < 3;j++)
-			//if (Temp[i + BoxStartRow][j + BoxStartCol] == num) return false;
 			if ((i+ BoxStartRow != row) && (j +BoxStartCol != col ) && (Temp[i + BoxStartRow][j + BoxStartCol] == num)) return false;
 	return true;
 }
@@ -417,7 +414,12 @@ bool Table::InGame()
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case 'C':
-				CheckGamerSol();
+				if (CheckGamerSol())
+				{
+					Win();
+					Sleep(1000);
+					return LoopGame();
+				}
 				textcolor(7);
 				gotoxy(x[i][j], y[i][j]);
 				break;
@@ -425,6 +427,7 @@ bool Table::InGame()
 				ShowSolve();
 				textcolor(7);
 				gotoxy(x[i][j], y[i][j]);
+				return LoopGame();
 				break;
 			case 27:
 				return false;

@@ -26,12 +26,7 @@ int main()
 		Menu Menu;
 		Menu.CreatMenu();
 		Scr.Playing();
-		for (;;)
-		{
-			endGame = Tab.InGame();
-			if (endGame == false) break;
-		}
-		//Sleep(2000);
+		endGame = Tab.InGame();
+		system("cls");
 	} while (endGame);
-	//system("pause");
 }

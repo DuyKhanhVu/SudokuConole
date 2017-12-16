@@ -6,7 +6,7 @@ void Menu::CreatMenu()
 	int y = 5;
 	for (int i = 0;i < 20;i++)
 	{
-		gotoxy(75, y);
+		gotoxy(80, y);
 		cout << "||";
 		y++;
 	}

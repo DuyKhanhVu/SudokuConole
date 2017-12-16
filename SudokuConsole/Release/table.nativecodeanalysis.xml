@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>116</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'level'.</DESCRIPTION>
+    <FUNCTION>Table::CreatData</FUNCTION>
+    <DECORATED>?CreatData@Table@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>109</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>111</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'level' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>113</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '==(s, "Easy")' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '==(s, "Medium")' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>115</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '==(s, "Hard")' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>116</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>116</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'level' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>157</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'i' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '154' of 'k:\th oop\git\sudokuconole\sudokuconsole\table.cpp'.</DESCRIPTION>
+    <FUNCTION>Table::CreatTable</FUNCTION>
+    <DECORATED>?CreatTable@Table@@QAEXXZ</DECORATED>
+    <FUNCLINE>136</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>154</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>168</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'i' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '165' of 'k:\th oop\git\sudokuconole\sudokuconsole\table.cpp'.</DESCRIPTION>
+    <FUNCTION>Table::CreatTable</FUNCTION>
+    <DECORATED>?CreatTable@Table@@QAEXXZ</DECORATED>
+    <FUNCLINE>136</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>165</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>315</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'this-&gt;y':  the readable size is '324' bytes, but '-36' bytes may be read.</DESCRIPTION>
+    <FUNCTION>Table::InGame</FUNCTION>
+    <DECORATED>?InGame@Table@@QAE_NXZ</DECORATED>
+    <FUNCLINE>297</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>300</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>301</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>303</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'y' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 87: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>311</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>312</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'this-&gt;CheckIn(i-1, j)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>314</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'i' may equal -1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>315</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'y' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>315</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'this-&gt;y[-1]', (readable range is 0 to 8)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>315</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'this-&gt;x':  the readable size is '324' bytes, but '-36' bytes may be read.</DESCRIPTION>
+    <FUNCTION>Table::InGame</FUNCTION>
+    <DECORATED>?InGame@Table@@QAE_NXZ</DECORATED>
+    <FUNCLINE>297</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>300</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>301</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>303</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'x' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 87: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>311</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>312</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'this-&gt;CheckIn(i-1, j)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>314</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'i' may equal -1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>315</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'x' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>315</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'this-&gt;x[-1]', (readable range is 0 to 8)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>336</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'this-&gt;y[i]':  the readable size is '36' bytes, but '-4' bytes may be read.</DESCRIPTION>
+    <FUNCTION>Table::InGame</FUNCTION>
+    <DECORATED>?InGame@Table@@QAE_NXZ</DECORATED>
+    <FUNCLINE>297</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>300</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>301</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>303</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'y' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 87: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>311</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>312</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'this-&gt;CheckIn(i-1, j)' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>435</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 65: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>332</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>333</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'this-&gt;CheckIn(i, j-1)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>335</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'j' may equal -1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>336</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'y' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>336</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'this-&gt;y[i][-1]', (readable range is 0 to 8)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+      <FILENAME>table.cpp</FILENAME>
+      <LINE>336</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'this-&gt;x[i]':  the readable size is '36' bytes, but '-4' bytes may be read.</DESCRIPTION>
+    <FUNCTION>Table::InGame</FUNCTION>
+    <DECORATED>?InGame@Table@@QAE_NXZ</DECORATED>
+    <FUNCLINE>297</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>300</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>301</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>303</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'x' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 87: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>311</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>312</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'this-&gt;CheckIn(i-1, j)' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>435</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>306</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'kbhit()')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>308</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>309</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'c' ) resolves to case 65: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>332</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>333</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'this-&gt;CheckIn(i, j-1)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>335</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'j' may equal -1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>336</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'x' is an Output from 'Screen::gotoxy' (declared at k:\th oop\git\sudokuconole\sudokuconsole\screen.h:18)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>k:\th oop\git\sudokuconole\sudokuconsole\</FILEPATH>
+        <FILENAME>table.cpp</FILENAME>
+        <LINE>336</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'this-&gt;x[i][-1]', (readable range is 0 to 8)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

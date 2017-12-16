@@ -171,7 +171,56 @@ void Screen::Loading()
 void Screen::Playing()
 {
 	textcolor(11);
-	gotoxy(60, 1); cout << " ___         __   ___               ";
-	gotoxy(60, 2); cout << "|___  |   | |  \\ |   |  |/""  |   |";
-	gotoxy(60, 3); cout << ".___| |___| |__/ |___|  |\\_ |___|  ";
+	gotoxy(65, 1); cout << " ___         __   ___               ";
+	gotoxy(65, 2); cout << "|___  |   | |  \\ |   |  |/""  |   |";
+	gotoxy(65, 3); cout << ".___| |___| |__/ |___|  |\\_ |___|  ";
+}
+
+void Screen::Win()
+{
+	textcolor(10);
+	gotoxy(62, 27); cout << "_            _  ________  ___         ";
+	gotoxy(62, 28); cout << "\\\\          //     ||     ||\\\\  ||";
+	gotoxy(62, 29); cout << " \\\\  //\\\\  //      ||     || \\\\ ||";
+	gotoxy(62, 30); cout << "  \\\\//  \\\\//    ___||___  ||  \\\\||";
+}
+
+bool Screen::LoopGame()
+{
+	int value = 1;
+	textcolor(14);
+	gotoxy(72, 32); cout << "DO YOU WANT RESTART?";
+	textcolor(10);
+	gotoxy(70, 33); cout << "YES";
+	textcolor(12);
+	gotoxy(90, 33); cout << "NO";
+
+	textcolor(9);
+	gotoxy(68, 33); cout << ">>";
+	gotoxy(73, 33); cout << "<<";
+	for (;;)
+	{
+		if (kbhit())
+		{
+			char c = getch();
+			if ((c == 'D') && (value == 1))
+			{
+				gotoxy(68, 33); cout << "  ";
+				gotoxy(73, 33); cout << "  ";
+				value++;
+				gotoxy(88, 33); cout << ">>";
+				gotoxy(92, 33); cout << "<<";
+			}
+			if ((c == 'A') && (value == 2))
+			{
+				gotoxy(88, 33); cout << "  ";
+				gotoxy(92 , 33); cout << "  ";
+				value--;
+				gotoxy(68, 33); cout << ">>";
+				gotoxy(73, 33); cout << "<<";
+			}
+			if (c == 32) break;
+		}
+	}
+	return (value == 1);
 }
