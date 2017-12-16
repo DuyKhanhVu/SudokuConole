@@ -110,25 +110,27 @@ void Table::CreatData(string s)
 {
 	Init();
 	int i, j, x, level;
-	if (s == "Easy") level = 18;
-	else if (s == "Medium") level = 15;
-	else if (s == "Hard") level = 12;
+	if (s == "Easy") level = 24;
+	else if (s == "Medium") level = 21;
+	else if (s == "Hard") level = 18;
 	for (int t = 0;t < level;t++)
 	{
 		bool found = false;
+		int count = 0; //Acceleration 
 		while (!found)
 		{
 			srand(time(NULL));
-			i = rand() % 9;
-			j = rand() % 9;
-			x = rand() % 9;
-			if (Safe(Sol, i, j, x + 1))
+			i = (rand() + count*2) % 9;
+			j = (rand() + count*4) % 9;
+			x = (rand() + count*6) % 9;
+			if ((Sol[i][j] == 0) && (Safe(Sol, i, j, x + 1)))
 			{
 				Tab[i][j] = x + 1;
 				Sol[i][j] = x + 1;
 				Temp[i][j] = x + 1;
 				found = true;
 			}
+			count++;
 		}
 	}
 }
