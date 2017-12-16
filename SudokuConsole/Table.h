@@ -6,6 +6,7 @@ class Table :
 protected:
 	int **Tab;
 	int **Sol;
+	int **Temp;
 	int x[9][9];
 	int y[9][9];
 public:
@@ -16,6 +17,7 @@ public:
 	bool FindSolve();
 	void CreatData(string s);
 	void InsertData();
+	void ShowHint();
 	void ShowSolve();
 	bool InGame();
 };

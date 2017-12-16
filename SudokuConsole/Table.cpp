@@ -6,16 +6,19 @@ void Table::Init()
 {
 	Tab = new int*[9];
 	Sol = new int*[9];
+	Temp = new int*[9];
 	for (int i = 0;i < 9;i++)
 	{
 		Tab[i] = new int[9];
 		Sol[i] = new int[9];
+		Temp[i] = new int[9];
 	}
 	for (int i=0; i<9;i++)
 		for (int j = 0;j < 9;j++)
 		{
 			Sol[i][j] = 0;
 			Tab[i][j] = 0;
+			Temp[i][j] = 0;
 		}
 }
 
@@ -123,6 +126,7 @@ void Table::CreatData(string s)
 			{
 				Tab[i][j] = x + 1;
 				Sol[i][j] = x + 1;
+				Temp[i][j] = x + 1;
 				found = true;
 			}
 		}
@@ -199,24 +203,6 @@ void Table::CreatTable()
 
 }
 
-void Table::ShowSolve()
-{
-	textcolor(10);
-	int x = 20;
-	int y = 6;
-	for (int i = 0;i < 9;i++)
-	{
-		for (int j = 0;j < 9;j++)
-
-		{
-			gotoxy(x + j * 4 + 2, y);
-			if (this->Tab[i][j] == 0)
-				cout << this->Sol[i][j];
-		}
-		y = y + 2;
-	}
-}
-
 void Table::InsertData()
 {
 	//Fill();
@@ -236,6 +222,39 @@ void Table::InsertData()
 		y = y + 2;
 	}
 }
+
+void Table::ShowHint()
+{
+	textcolor(10);
+	for (int i = 0;i < 9;i++)
+		for (int j = 0;j < 9;j++)
+			if ((Tab[i][j] == 0) && (Temp[i][j] == 0))
+			{
+				gotoxy(x[i][j], y[i][j]);
+				cout << Sol[i][j];
+				Temp[i][j] = Sol[i][j];
+				return;
+			}
+}
+
+void Table::ShowSolve()
+{
+	textcolor(10);
+	int x = 20;
+	int y = 6;
+	for (int i = 0;i < 9;i++)
+	{
+		for (int j = 0;j < 9;j++)
+
+		{
+			gotoxy(x + j * 4 + 2, y);
+			if (this->Tab[i][j] == 0)
+				cout << this->Sol[i][j];
+		}
+		y = y + 2;
+	}
+}
+
 
 bool Table::InGame()
 {
@@ -281,46 +300,85 @@ bool Table::InGame()
 				break;
 			case '1':
 				if (Tab[i][j] == 0)
+				{
 					cout << 1;
+					Temp[i][j] = 1;
+				}
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '2':
 				if (Tab[i][j] == 0)
+				{
 					cout << 2;
+					Temp[i][j] = 2;
+				}
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '3':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 3;
+					Temp[i][j] = 3;
+				}
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '4':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 4;
+					Temp[i][j] = 4;
+				}
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '5':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 5;
+					Temp[i][j] = 5;
+				}
 				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '6':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 6;
+					Temp[i][j] = 6;
+				}
+				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '7':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 7;
+					Temp[i][j] = 7;
+				}
+				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '8':
 				if (Tab[i][j] == 0) 
+				{
 					cout << 8;
+					Temp[i][j] = 8;
+				}
+				gotoxy(x[i][j], y[i][j]);
 				break;
 			case '9':
-				if (Tab[i][j] == 0) cout << 9;
+				if (Tab[i][j] == 0) 
+				{
+					cout << 9;
+					Temp[i][j] = 9;
+				}
+				gotoxy(x[i][j], y[i][j]);
+				break;
+			case 'H':
+				ShowHint();
+				textcolor(7);
+				gotoxy(x[i][j], y[i][j]);
 				break;
 			case 32:
 				ShowSolve();
+				textcolor(7);
+				gotoxy(x[i][j], y[i][j]);
 				break;
 			case 27:
 				return false;

@@ -25,4 +25,6 @@ public:
 	string SlectLevel();
 	void Loading();
 	void Playing();
+	void Win();
+	void LoopGame();
 };
