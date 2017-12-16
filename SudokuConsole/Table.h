@@ -19,6 +19,7 @@ public:
 	void InsertData();
 	void ShowHint();
 	void ShowSolve();
+	bool CheckGamerSol();
 	bool InGame();
 };
 

@@ -26,5 +26,5 @@ public:
 	void Loading();
 	void Playing();
 	void Win();
-	void LoopGame();
+	bool LoopGame();
 };

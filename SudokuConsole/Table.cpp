@@ -255,6 +255,47 @@ void Table::ShowSolve()
 	}
 }
 
+bool Check(int *Temp[], int row, int col, int num)
+{
+
+	for (int i = 0;i < 9; i++)
+		//if (Temp[i][col] == num) return false;
+		if ((i != row) && (Temp[i][col] == num)) return false;
+	for (int j = 0;j < 9; j++)
+		//if (Temp[row][j] == num) return false;
+		if ((j != col) && (Temp[row][j] == num)) return false;
+
+	int BoxStartRow = row - row % 3;
+	int BoxStartCol = col - col % 3;
+	for (int i = 0;i < 3;i++)
+		for (int j = 0;j < 3;j++)
+			//if (Temp[i + BoxStartRow][j + BoxStartCol] == num) return false;
+			if ((i+ BoxStartRow != row) && (j +BoxStartCol != col ) && (Temp[i + BoxStartRow][j + BoxStartCol] == num)) return false;
+	return true;
+}
+
+bool Table::CheckGamerSol()
+{
+	bool error = true;
+	textcolor(14);
+	for (int i=0;i<9;i++)
+		for (int j = 0;j < 9;j++)
+		{
+			if (Temp[i][j] == 0)
+			{
+				gotoxy(x[i][j], y[i][j]);
+				cout << "-";
+				error = false;
+			}
+			else if ((Tab[i][j] == 0) && Check(Temp, i, j, Temp[i][j]) == false)
+			{
+				gotoxy(x[i][j], y[i][j]); cout << Temp[i][j];
+				error = false;
+			}
+		}
+	return error;
+}
+
 
 bool Table::InGame()
 {
@@ -372,6 +413,11 @@ bool Table::InGame()
 				break;
 			case 'H':
 				ShowHint();
+				textcolor(7);
+				gotoxy(x[i][j], y[i][j]);
+				break;
+			case 'C':
+				CheckGamerSol();
 				textcolor(7);
 				gotoxy(x[i][j], y[i][j]);
 				break;
